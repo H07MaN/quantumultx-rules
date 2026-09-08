@@ -5,7 +5,9 @@ GPL-3.0; retains upstream authorship. No network requests or remote scripts.
 """
 from pathlib import Path
 import sys, re, json, hashlib, fnmatch
-from supplement import merge_geq
+from datetime import datetime, timezone
+from supplement import merge_geq, conflicts
+from rewrite_supplement import merge_rewrites, optional_region
 
 src = Path(sys.argv[1])
 out = Path(__file__).resolve().parent
@@ -60,11 +62,16 @@ for block in blocks:
         hosts.update(declared & global_hosts)
 
 hosts = {h for h in hosts if h and h not in {'*', '*.*'} and not h.startswith('-')}
+rewrite_report = merge_rewrites(src / 'geq-rewrite.list', result, hosts, seen)
+(out / 'bili-region-optional.snippet').write_text(optional_region())
+build_date = datetime.now(timezone.utc).date().isoformat()
 header = ['# Quantumult X 国内广告拦截：HTTPS 重写',
           '# Derived from fmz200/wool_scripts; author: 奶思 and upstream contributors.',
           '# Source: https://github.com/fmz200/wool_scripts',
-          '# License: GPL-3.0 (see LICENSE). Modified: 2026-09-07.',
-          '# Native reject rules + two selected response replacements; no external JavaScript.',
+          '# License: GPL-3.0 (see LICENSE). Modified: ' + build_date,
+          '# Native reject rules, selected response replacements and GeQ1an redirects; no external JavaScript.',
+          '# Supplement source: ' + rewrite_report['source'],
+          '# Supplement SHA256: ' + rewrite_report['sha256'],
           '# Enable Rewrite and MitM, generate/install/trust your own CA on your device.',
           '# Snapshot. Not all ads or App versions are supported. No claim of device testing.',
           '# Modifications: native subset, deduplication, KFC regex repair, scoped hostname list.',
@@ -80,7 +87,7 @@ for line in filters.splitlines():
     if not re.fullmatch(r'[a-z0-9_-]+(?:\.[a-z0-9_-]+)+', domain):
         continue
     # Preserve shared service hosts used by the HTTPS resource.
-    if any(fnmatch.fnmatchcase(domain, h) or (typ == 'host-suffix' and (h == domain or h.endswith('.' + domain))) for h in hosts):
+    if conflicts(domain, typ, hosts):
         overlaps.append(domain)
         continue
     rule = f'{typ}, {domain}, {action.lower()}'
@@ -98,7 +105,7 @@ geq_report = merge_geq(src / 'geq.list', fresult, fseen, hosts)
     '# Quantumult X 国内广告域名拦截',
     '# Derived from fmz200/wool_scripts; author: 奶思 and upstream contributors.',
     '# Source: https://github.com/fmz200/wool_scripts; GPL-3.0 (see LICENSE).',
-    '# Modified: 2026-09-07. Domain-only subset; no IP or keyword rules.',
+    '# Modified: ' + build_date + '. Domain-only subset; no IP or keyword rules.',
     '# Import as filter resource; leave force-policy unset.',
     '# Supplement: GeQ1an/Rules master/QuantumultX/Filter/AdBlock.list; domain subset, mapped to reject.',
     '# Supplement SHA256: ' + geq_report['sha256'],
@@ -110,6 +117,7 @@ stats = {'rewrite_rules': len(seen), 'mitm_hostnames': len(hosts),
          'source_sections': sections,
          'validation': 'static syntax and deduplication only; no on-device test',
          'update_mode': 'ChatGPT scheduled task; no GitHub Actions workflow',
-         'supplement': geq_report}
+         'supplement': geq_report, 'rewrite_supplement': rewrite_report,
+         'built_at': build_date}
 (out / 'build-report.json').write_text(json.dumps(stats, ensure_ascii=False, indent=2) + '\n')
 print(json.dumps({k:v for k,v in stats.items() if k not in {'source_sections', 'removed_filter_overlap'}}, ensure_ascii=False))
