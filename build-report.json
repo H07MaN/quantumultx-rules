@@ -1,27 +1,32 @@
 {
-  "rewrite_rules": 1306,
-  "mitm_hostnames": 817,
+  "rewrite_rules": 1530,
+  "mitm_hostnames": 1003,
   "source_sections_with_selected_rules": 511,
-  "filter_rules": 8505,
+  "filter_rules": 8449,
   "skipped_invalid_regex": [],
   "removed_filter_overlap": [
     "1rtb.net",
+    "888.tv.sohu.com",
     "a.ckm.iqiyi.com",
     "ad.m.iqiyi.com",
     "adm.10jqka.com.cn",
     "admobile.top",
     "adpai.thepaper.cn",
     "adproxy.autohome.com.cn",
+    "ads-img-al.xhscdn.com",
     "adservice.sigmob.cn",
     "adui.tg.meitu.com",
     "adview.cn",
     "afd.baidu.com",
     "afp.iqiyi.com",
+    "alienskins.cn",
+    "anydeskchina.cn",
     "anythinktech.com",
     "api.cupid.iqiyi.com",
     "api.iqiyi.com",
     "api.jr.mi.com",
     "beacon.qq.com",
+    "betterzipcn.com",
     "business.msstatic.com",
     "c.uaa.iqiyi.com",
     "cdn.cmop.mgtv.com",
@@ -33,20 +38,27 @@
     "da.mgtv.com",
     "dflow.bz.mgtv.com",
     "dns.jd.com",
+    "dongmansoft.com",
     "dsp-impr2.youdao.com",
     "dsp.toutiao.com",
     "e.kuaishou.com",
+    "earmasterchina.cn",
     "emoticon.sns.iqiyi.com",
     "encounter.bz.mgtv.com",
     "feedback.uc.cn",
     "floor.bz.mgtv.com",
+    "folxchina.cn",
     "gamecenter.iqiyi.com",
     "gdt.qq.com",
     "ggic03.miguvideo.com",
     "ggx03.miguvideo.com",
     "goblin.hupu.com",
+    "huishenghuiying.com.cn",
+    "hypeapp.cn",
     "i-lq.snssdk.com",
+    "idmchina.net",
     "ifacelog.iqiyi.com",
+    "imazingchina.com",
     "img.da.mgtv.com",
     "imgaliyun.da.mgtv.com",
     "imgaliyun.res.mgtv.com",
@@ -56,11 +68,13 @@
     "jampp.com",
     "kad.gotokeep.com",
     "layer.bz.mgtv.com",
+    "luping.net.cn",
     "m.yap.yahoo.com",
     "m1.ad.10010.com",
     "m2.da.mgtv.com",
     "mbdlog.iqiyi.com",
     "mi.gdt.qq.com",
+    "mindmanager.cn",
     "mob.bz.mgtv.com",
     "mob.com",
     "mobads-pre-config.cdn.bcebos.com",
@@ -68,10 +82,12 @@
     "mobile.da.mgtv.com",
     "mobile2.da.mgtv.com",
     "msg.iqiyi.com",
+    "msg.umengcloud.com",
     "msga.cupid.iqiyi.com",
     "nl.notice.iqiyi.com",
     "nl.rcd.iqiyi.com",
     "notice.iqiyi.com",
+    "officesoftcn.com",
     "optimus-ads.amap.com",
     "otheve.beacon.qq.com",
     "paopao.iqiyi.com",
@@ -81,6 +97,7 @@
     "pcvideoaliyun.titan.mgtv.com",
     "pcvideoyd.titan.mgtv.com",
     "pcweb.v1.mgtv.com",
+    "photozoomchina.com",
     "policy.video.iqiyi.com",
     "py.da.mgtv.com",
     "rc-topic-api.bz.mgtv.com",
@@ -105,6 +122,7 @@
     "vip.bz.mgtv.com",
     "web.da.mgtv.com",
     "x.da.mgtv.com",
+    "xitongqingli.com",
     "y.da.mgtv.com",
     "ys.da.mgtv.com",
     "yuedu.iqiyi.com",
@@ -629,10 +647,10 @@
   "supplement": {
     "source": "https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list",
     "sha256": "41524467645d26179eca9277e9347d6f73cbf723d5d80f8c8bef25a3afd439c1",
-    "added": 6077,
+    "added": 6039,
     "skipped_counts": {
-      "mitm_overlap": 65,
-      "already_covered": 2036,
+      "mitm_overlap": 105,
+      "already_covered": 2034,
       "protected_service_or_business_label": 2,
       "non_domain_rule": 58,
       "invalid_domain": 2
@@ -891,6 +909,18 @@
         "reason": "invalid_domain"
       },
       {
+        "rule": "HOST-SUFFIX,888.tv.sohu.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,abbyychina.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,adimg.uve.weibo.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
         "rule": "HOST-SUFFIX,adm.10jqka.com.cn,AdBlock",
         "reason": "mitm_overlap"
       },
@@ -919,11 +949,43 @@
         "reason": "mitm_overlap"
       },
       {
+        "rule": "HOST-SUFFIX,bartender.cc,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,betterzip.net,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,beyondcompare.cc,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,bingdianhuanyuan.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
         "rule": "HOST-SUFFIX,btrace.qq.com,AdBlock",
         "reason": "mitm_overlap"
       },
       {
+        "rule": "HOST-SUFFIX,chemdraw.com.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
         "rule": "HOST-SUFFIX,cmsapi.wifi8.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,codesoftchina.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,coreldrawchina.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,crossoverchina.com,AdBlock",
         "reason": "mitm_overlap"
       },
       {
@@ -932,6 +994,38 @@
       },
       {
         "rule": "HOST-SUFFIX,dsp-impr2.youdao.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,easyrecoverychina.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,ediuschina.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,flstudiochina.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,formysql.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,guitarpro.cc,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,huishenghuiying.com.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,iconworkshop.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,imindmap.cc,AdBlock",
         "reason": "mitm_overlap"
       },
       {
@@ -947,6 +1041,58 @@
         "reason": "mitm_overlap"
       },
       {
+        "rule": "HOST-SUFFIX,jihehuaban.com.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,kingdeecn.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,logoshejishi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,mairuan.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,mathtype.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,mindmanager.cc,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,mindmapper.cc,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,mycleanmymac.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,nicelabel.cc,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,ntfsformac.cc,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,ntfsformac.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,overturechina.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,passwordrecovery.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
         "rule": "HOST-SUFFIX,pay.holaq.com,AdBlock",
         "reason": "protected_service_or_business_label"
       },
@@ -955,7 +1101,19 @@
         "reason": "mitm_overlap"
       },
       {
+        "rule": "HOST-SUFFIX,pdfexpert.cc,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,sdkapp.uve.weibo.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
         "rule": "HOST-SUFFIX,sf3-fe-tos.pglstatp-toutiao.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,shankejingling.com,AdBlock",
         "reason": "mitm_overlap"
       },
       {
@@ -975,12 +1133,32 @@
         "reason": "mitm_overlap"
       },
       {
+        "rule": "HOST-SUFFIX,ultraiso.net,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
         "rule": "HOST-SUFFIX,ut2.shuqistat.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,vegaschina.cn,AdBlock",
         "reason": "mitm_overlap"
       },
       {
         "rule": "HOST-SUFFIX,XiaoQiang,AdBlock",
         "reason": "invalid_domain"
+      },
+      {
+        "rule": "HOST-SUFFIX,xshellcn.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,yuanchengxiezuo.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,zbrushcn.com,AdBlock",
+        "reason": "mitm_overlap"
       },
       {
         "rule": "HOST,impservice.dictapp.youdao.com,AdBlock",
@@ -1148,5 +1326,673 @@
       }
     ],
     "validation": "static screening; added domains are not individually device-tested"
-  }
+  },
+  "rewrite_supplement": {
+    "source": "https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Rewrite/Rewrite.list",
+    "sha256": "39077c67a0ad6b766f46f7a6317ee9dd816ed708fec8f2e99086b7f6727f73ad",
+    "added_reject": 163,
+    "added_redirect": 61,
+    "skipped": [
+      {
+        "rule": "^https?://hypersnap\\.mairuan\\.com/ url 302 https://www.keyshot.com/",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "(^https?://app\\.biliintl\\.com/(x/)?(intl|dm|reply|history|v\\d/(fav|msgfeed)).+?)(&s_locale=zh-Hans_[A-Z]{2})(.+?)(&sim_code=\\d+)(.+) url 302 $1&s_locale=zh-Hans_PH$6&sim_code=51503$8",
+        "reason": "separate_optional_region_resource"
+      },
+      {
+        "rule": "(^https?://passport\\.biliintl\\.com/x/intl/passport-login/.+)(&s_locale=zh-Hans_[A-Z]{2})(.+)(&sim_code=\\d+)(.+) url 302 $1&s_locale=zh-Hans_PH$35&sim_code=51503$5",
+        "reason": "separate_optional_region_resource"
+      },
+      {
+        "rule": "^https?://mp\\.weixin\\.qq\\.com/mp/getappmsgad url response-body \"advertisement_num\":\\d,\"advertisement_info\":\\[.+\\], response-body \"advertisement_num\":0,\"advertisement_info\":[],",
+        "reason": "existing_wechat_response_rule_preferred"
+      },
+      {
+        "rule": "^https?://api\\.21jingji\\.com/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://app\\.58\\.com/api/home/(advertising|appadv)/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://app\\.58\\.com/api/home/invite/popupAdv url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://app\\.58\\.com/api/log/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://gw\\.alicdn\\.com/imgextra/\\w{2}/[\\w!]+-\\d-tps-\\d{3}-\\d{4}\\.(jpg|png)$ url reject-200",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://acs\\.m\\.taobao\\.com/gw/mtop\\.etao\\.noah\\.query/.+tao_splash url reject-200",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://acs\\.m\\.taobao\\.com/gw/mtop\\.alimama\\.etao\\.config\\.query/.+?etao_advertise url reject-200",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://acs\\.m\\.taobao\\.com/gw/mtop\\.film\\.mtopadvertiseapi\\.(queryadvertise|queryloadingbanner)/ url reject-200",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://gw\\.kaola\\.com/gw/dgmobile/newOpenAd url reject-200",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api-new\\.app\\.acfun\\.cn/rest/app/flash/screen/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.bjxkhc\\.com/index\\.php/app/ios/ads/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://[\\w-]+\\.amemv\\.com/aweme/v\\d/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://[\\w-]+\\.snssdk\\.com/.+_ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://pan\\.baidu\\.com/act/api/activityentry url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://pan\\.baidu\\.com/act/v\\d/(bchannel|welfare)/list url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://issuecdn\\.baidupcs\\.com/issue/netdisk/guanggao url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://mime\\.baidu\\.com/v\\d/activity/advertisement url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://cloud\\.189\\.cn/include/splash/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.chelaile\\.net\\.cn/goocity/advert/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://cap\\.caocaokeji\\.cn/advert-bss/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.caijingmobile\\.com/(ad|advert)/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.douban\\.com/v\\d/app_ads/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://rtbapi\\.douyucdn\\.cn/japi/sign/app/getinfo url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.dangdang\\.com/mapi\\d/mobile/init url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://daoyu\\.sdo\\.com/api/userCommon/getAppStartAd url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://ssp\\.dzh\\.com\\.cn/v2api/adgroupjson url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://capis(-\\d)?\\.didapinche\\.com/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://www\\.didapinche\\.com/app/adstat/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.gaoqingdianshi\\.com/api/v\\d/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://cdn\\.dianshihome\\.com/static/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://maicai\\.api\\.ddxq\\.mobi/advert/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://pic\\.edaijia\\.cn/adsplash/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://cube\\.elemecdn\\.com/[\\w/]+\\.jpeg\\?x-oss-process=image/resize,m_fill,w_\\d{3},h_\\d{4}/format,webp/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://cube\\.elemecdn\\.com/[\\w/]+\\.jpeg\\?x-oss-process=image/resize,m_fill,w_1\\d{3},h_2\\d{3}/format,webp/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://cube\\.elemecdn\\.com/[\\w/]+\\.jpeg\\?x-oss-process=image/resize,m_fill,w_6\\d{2},h_8\\d{2}/format,webp/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://cube\\.elemecdn\\.com/\\w/\\w{2}/\\w+mp4\\.mp4\\? url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://i\\.ys7\\.com/api/ads url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api-release\\.wuta-cam\\.com/ad_tree url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://res-release\\.wuta-cam\\.com/json/ads_component_cache\\.json url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://zone\\.guiderank-app\\.com/guiderank-web/app/ad/listLaunchADByCity\\.do url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.hanju\\.koudaibaobao\\.com/api/carp/kp\\? url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://imeclient\\.openspeech\\.cn/adservice/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://webboot\\.zhangyue\\.com/zycl/api/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://nnapp\\.cloudbae\\.cn:\\d+/mc/api/advert/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://icc\\.one/iFreeTime/xid32uxaoecnfv2/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://(bdsp-x|dsp-x)\\.jd\\.com/adx/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://ms\\.jr\\.jd\\.com/gw/generic/aladdin/(new)?na/m/getLoadingPicture url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.jxedt\\.com/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://\\w+\\.kakamobi\\.cn/api/open/v\\d/advert-sdk/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://service\\.iciba\\.com/popo/open/screens/v\\d\\?adjson url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.gotokeep\\.com/op-engine-webapp/v\\d/ad url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.laifeng\\.com/v\\d/start/ads url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.club\\.lenovo\\.cn/common/open_ad url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://shopapi\\.io\\.mi\\.com/mtop/mf/resource/homePage/pageConfig url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.mgzf\\.com/renter-operation/home/startHomePage url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://mangaapi\\.manhuaren\\.com/v\\d/public/getStartPageAds url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://appconf\\.mail\\.163\\.com/mmad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://support\\.you\\.163\\.com/xhr/boot/getBootMedia\\.json url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://p\\.du\\.163\\.com/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://app-api\\.niu\\.com/v\\d/advertisement/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://gfp\\.veta\\.naver\\.com/adcall\\? url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://slapi\\.oray\\.net/client/ad url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://slapi\\.oray\\.net/adver url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://pss\\.txffp\\.com/piaogen/images/launchScreen/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.(pinduoduo|yangkeduo)\\.com/api/cappuccino/splash url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://cmsapi\\.wifi8\\.com/v\\d/(emptyAd|adNew)/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://mrobot\\.(pcauto|pconline)\\.com\\.cn/v\\d/ad\\dp url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://mrobot\\.pconline\\.com\\.cn/s/onlineinfo/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://mrobot\\.pcauto\\.com\\.cn/xsp/s/auto/info/(ad|preload) url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://open\\.qyer\\.com/qyer/startpage/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://open\\.qyer\\.com/qyer/config/get url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://media\\.qyer\\.com/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.qbb6\\.com/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.k\\.sohu\\.com/api/news/adsense url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://pic\\.k\\.sohu\\.com/img\\d/wb/tj/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://(api|api-bk\\d+)\\.tv\\.sohu\\.com/agg/api/app/config/bootstrap url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://gw-passenger\\.01zhuanche\\.com/gw-passenger/zhuanche-passengerController/notk/passenger/recommendADs url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://image\\.suning\\.cn/uimg/ma/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://mpcs\\.suning\\.com/mpcs/dm/getDmInfo url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.futunn\\.com/v\\d/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\d\\.futunn\\.com/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://qt\\.qq\\.com/lua/mengyou/get_splash_screen_info url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://4gimg\\.map\\.qq\\.com/mwaSplash/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://r\\.inews\\.qq\\.com/(adsBlacklist|getFullScreenPic|getQQNewsRemoteConfig) url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://news\\.ssp\\.qq\\.com/app url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://.+?/music/common/upload/t_splash_info/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://m\\.tuniu\\.com/api/operation/splash/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://app\\.variflight\\.com/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://app\\.variflight\\.com/v\\d/advert/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.vistopia\\.com\\.cn/api/v\\d/home/advertisement url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://explorer\\.tratao\\.com/api/client/v4/xtransfer/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://api\\.xiachufang\\.com/v\\d/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://venus\\.yhd\\.com/memhome/launchConfig url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://app\\.yinxiang\\.com/ads/ url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://a\\.qiumibao\\.com/activities/config\\.php url reject",
+        "reason": "existing_pattern_preferred"
+      },
+      {
+        "rule": "^https?://itunes\\.apple\\.com/lookup\\?id=575826903 url reject",
+        "reason": "app_update_lookup_not_advertising"
+      },
+      {
+        "rule": "^https?://api\\.izuiyou\\.com/ad/ url reject",
+        "reason": "existing_pattern_preferred"
+      }
+    ],
+    "loop_guards": [
+      "https://taobao.com/",
+      "https://www.jd.com/",
+      "https://www.mi.com/",
+      "https://you.163.com/",
+      "https://suning.com/",
+      "https://yhd.com/"
+    ],
+    "redirect_tests": [
+      {
+        "pattern": "^https?://(www\\.)?(g|google)\\.cn",
+        "target": "https://www.google.com"
+      },
+      {
+        "pattern": "^https?://(ditu|maps)\\.google\\.cn",
+        "target": "https://maps.google.com"
+      },
+      {
+        "pattern": "^https?://translate\\.google\\.cn",
+        "target": "https://translate.google.com"
+      },
+      {
+        "pattern": "^(?!https://taobao\\.com(?:[/:?#]|$))https?://(www\\.)?taobao\\.com/",
+        "target": "https://taobao.com/"
+      },
+      {
+        "pattern": "^(?!https://www\\.jd\\.com(?:[/:?#]|$))https?://(www\\.)?jd\\.com/",
+        "target": "https://www.jd.com/"
+      },
+      {
+        "pattern": "^(?!https://www\\.mi\\.com(?:[/:?#]|$))https?://(www\\.)?mi\\.com/",
+        "target": "https://www.mi.com/"
+      },
+      {
+        "pattern": "^(?!https://you\\.163\\.com(?:[/:?#]|$))https?://you\\.163\\.com/",
+        "target": "https://you.163.com/"
+      },
+      {
+        "pattern": "^(?!https://suning\\.com(?:[/:?#]|$))https?://(www\\.)?suning\\.com/",
+        "target": "https://suning.com/"
+      },
+      {
+        "pattern": "^(?!https://yhd\\.com(?:[/:?#]|$))https?://(www\\.)?yhd\\.com/",
+        "target": "https://yhd.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?firefox\\.com\\.cn/(download/)?$",
+        "target": "https://www.mozilla.org/zh-CN/firefox/new/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?ign\\.xn--fiqs8s/",
+        "target": "http://cn.ign.com/ccpref/us"
+      },
+      {
+        "pattern": "^https?://(www\\.)?abbyychina\\.com/",
+        "target": "https://www.abbyy.cn/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?alienskins\\.cn/",
+        "target": "https://exposure.software/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?anydeskchina\\.cn/",
+        "target": "https://anydesk.com/zhs"
+      },
+      {
+        "pattern": "^https?://(www\\.)?bartender\\.cc/",
+        "target": "https://www.macbartender.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?(betterzipcn|betterzip)\\.(com|net)/",
+        "target": "https://macitbetter.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?beyondcompare\\.cc/",
+        "target": "https://www.scootersoftware.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?bingdianhuanyuan\\.cn/",
+        "target": "https://www.faronics.com/zh-hans/products/deep-freeze"
+      },
+      {
+        "pattern": "^https?://(www\\.)?chemdraw\\.com\\.cn/",
+        "target": "https://www.perkinelmer.com.cn/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?codesoftchina\\.com/",
+        "target": "https://www.teklynx.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?coreldrawchina\\.com/",
+        "target": "https://www.coreldraw.com/cn/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?crossoverchina\\.com/",
+        "target": "https://www.codeweavers.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?dongmansoft\\.com/",
+        "target": "https://www.udongman.cn/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?earmasterchina\\.cn/",
+        "target": "https://www.earmaster.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?easyrecoverychina\\.com/",
+        "target": "https://www.ontrack.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?ediuschina\\.com/",
+        "target": "https://www.grassvalley.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?flstudiochina\\.com/",
+        "target": "https://www.image-line.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?folxchina\\.cn/",
+        "target": "https://mac.eltima.com/cn/download-manager.html"
+      },
+      {
+        "pattern": "^https?://(www\\.)?formysql\\.com/",
+        "target": "https://www.navicat.com.cn/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?guitarpro\\.cc/",
+        "target": "https://www.guitar-pro.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?huishenghuiying\\.com\\.cn/",
+        "target": "https://www.coreldraw.com/cn/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?hypeapp\\.cn/",
+        "target": "https://tumult.com/hype/"
+      },
+      {
+        "pattern": "^https?://hypersnap\\.mairuan\\.com/",
+        "target": "https://www.hyperionics.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?iconworkshop\\.cn/",
+        "target": "https://www.axialis.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?idmchina\\.net/",
+        "target": "https://www.internetdownloadmanager.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?imazingchina\\.com/",
+        "target": "https://imazing.com/zh"
+      },
+      {
+        "pattern": "^https?://(www\\.)?imindmap\\.cc/",
+        "target": "https://www.ayoa.com/previously-imindmap/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?jihehuaban\\.com\\.cn/",
+        "target": "https://www.chartwellyorke.com/sketchpad/x24795.html"
+      },
+      {
+        "pattern": "^https?://(www\\.)?kingdeecn\\.cn/",
+        "target": "http://www.kingdee.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?logoshejishi\\.com",
+        "target": "https://www.sothink.com/product/logo-design-software/"
+      },
+      {
+        "pattern": "^https?://logoshejishi\\.mairuan\\.com/",
+        "target": "https://www.sothink.com/product/logo-design-software/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?luping\\.net\\.cn/",
+        "target": "https://www.techsmith.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?mathtype\\.cn/",
+        "target": "https://www.dessci.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?mindmanager\\.(cc|cn)/",
+        "target": "https://www.mindjet.com/cn/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?mindmapper\\.cc/",
+        "target": "https://www.mindmapper.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?(mycleanmymac|xitongqingli)\\.com/",
+        "target": "https://macpaw.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?nicelabel\\.cc/",
+        "target": "https://www.nicelabel.com/zh/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?ntfsformac\\.cc/",
+        "target": "https://www.tuxera.com/products/tuxera-ntfs-for-mac-cn/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?ntfsformac\\.cn/",
+        "target": "https://china.paragon-software.com/home-mac/ntfs-for-mac/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?officesoftcn\\.com/",
+        "target": "https://www.microsoft.com/zh-cn/microsoft-365"
+      },
+      {
+        "pattern": "^https?://(www\\.)?overturechina\\.com/",
+        "target": "https://sonicscores.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?passwordrecovery\\.cn/",
+        "target": "https://cn.elcomsoft.com/aopr.html"
+      },
+      {
+        "pattern": "^https?://(www\\.)?pdfexpert\\.cc/",
+        "target": "https://pdfexpert.com/zh"
+      },
+      {
+        "pattern": "^https?://(www\\.)?photozoomchina\\.com/",
+        "target": "https://www.benvista.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?shankejingling\\.com/",
+        "target": "https://www.sothink.com/product/flashdecompiler/"
+      },
+      {
+        "pattern": "^https?://cn\\.ultraiso\\.net/",
+        "target": "https://cn.ezbsystems.com/ultraiso/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?vegaschina\\.cn/",
+        "target": "https://www.vegascreativesoftware.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?xshellcn\\.com/",
+        "target": "https://www.netsarang.com/zh/xshell/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?yuanchengxiezuo\\.com/",
+        "target": "https://www.teamviewer.com/"
+      },
+      {
+        "pattern": "^https?://(www\\.)?zbrushcn\\.com/",
+        "target": "https://pixologic.com/"
+      },
+      {
+        "pattern": "^http://(www\\.)?aicoin\\.cn/$",
+        "target": "https://www.aicoin.com/"
+      }
+    ],
+    "added_total": 224
+  },
+  "built_at": "2026-09-08"
 }
