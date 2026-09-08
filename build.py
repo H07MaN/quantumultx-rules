@@ -86,6 +86,12 @@ for line in filters.splitlines():
     if (typ, domain) not in fseen:
         fseen.add((typ, domain))
         fresult.append(rule)
+# User-tested together: banner disappeared on 2026-09-08.
+# Keep exact hosts only; individual necessity has not been isolated.
+for domain in ('83876gc.ezze0ct.com', '0812gc.18tmnxt.com'):
+    if ('host', domain) not in fseen:
+        fseen.add(('host', domain))
+        fresult.append(f'host, {domain}, reject')
 (out / 'china-adblock.list').write_text('\n'.join([
     '# Quantumult X 国内广告域名拦截',
     '# Derived from fmz200/wool_scripts; author: 奶思 and upstream contributors.',
