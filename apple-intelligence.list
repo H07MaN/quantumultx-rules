@@ -1,0 +1,11 @@
+# Quantumult X - Apple Intelligence connectivity
+# Source: https://support.apple.com/en-us/101555
+# Import as FILTER resource. Enable policy override and select your proxy.
+# Built-in direct is a fallback, not an unlock policy. No MITM required.
+# Includes Extensions, Siri/Search and Private Cloud Compute.
+host, apple-relay.apple.com, direct
+host, guzzoni.apple.com, direct
+host-suffix, smoot.apple.com, direct
+host, apple-relay.cloudflare.com, direct
+host, apple-relay.fastly-edge.com, direct
+host, cp4.cloudflare.com, direct
