@@ -1,0 +1,8 @@
+# Quantumult X - iCloud Private Relay connectivity
+# Source: https://support.apple.com/en-us/101555
+# Import as FILTER resource. Enable policy override and select your proxy.
+# Built-in direct is a fallback. Regional eligibility is not changed.
+# UDP 443 for mask; TCP 443 for mask-h2 and mask-api. No MITM required.
+host, mask.icloud.com, direct
+host, mask-h2.icloud.com, direct
+host, mask-api.icloud.com, direct
