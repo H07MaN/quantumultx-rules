@@ -39,7 +39,7 @@ https://raw.githubusercontent.com/H07MaN/quantumultx-rules/main/china-adblock.sn
 ## 本次构建范围
 
 - 1,306 条原生重写规则，包括 reject 系列和两条选定的广告响应字段替换。
-- 2,428 条域名拦截规则；删除了命中本重写服务主机的部分域名拦截冲突。
+- 8,505 条域名拦截规则；删除了命中本重写服务主机的部分域名拦截冲突。
 - 817 个去重的 MitM 主机名/模式，取自保留规则所属分组与上游已启用主机名的交集。分组中可能仍包含只供其他规则使用的主机名，并非逐个实测清单。
 - 选取了 511 个上游分组中的规则。分组数不等于支持或实测通过的 App 数。
 - 包括百度系、知乎、小红书、京东、部分微信公众号推广接口，以及许多开屏、弹窗与广告联盟接口；每个 App 只覆盖保留下来的路径。
@@ -50,7 +50,7 @@ https://raw.githubusercontent.com/H07MaN/quantumultx-rules/main/china-adblock.sn
 
 ## 更新与来源
 
-当前为 2026-09-07 生成的手动快照。`update-interval=86400` 仅让 Quantumult X 每天检查本仓库，**不代表本仓库每天自动同步上游**。没有部署定时工作流。
+本仓库由已设置的 ChatGPT 定时任务每 7 天检查上游并在校验通过后发布；没有部署 GitHub Actions 工作流。`update-interval=86400` 让 Quantumult X 每天检查本仓库的已发布版本。
 
 - 原始重写：https://github.com/fmz200/wool_scripts/blob/main/QuantumultX/rewrite/rewrite.snippet
 - 原始分流：https://github.com/fmz200/wool_scripts/blob/main/QuantumultX/filter/filter.list
@@ -62,3 +62,11 @@ https://raw.githubusercontent.com/H07MaN/quantumultx-rules/main/china-adblock.sn
 ## 2026-09-08 用户实测补充
 
 新增两个精确域名：`83876gc.ezze0ct.com`、`0812gc.18tmnxt.com`。用户确认同时拦截后底部横幅消失，尚未分别验证每条必要性及翻页功能。没有扩大为 gc 关键词或整个主域名拦截。build.py 会在后续重建时保留这两条规则。
+
+## GeQ1an 补充来源（2026-09-08）
+
+在原有 2,428 条分流基础上新增 6,077 条，总计 8,505 条。原有重写和两个实测横幅域名保留。补充仅接受 HOST/HOST-SUFFIX 域名规则，统一映射为 reject，排除 IP、IPv6 和 User-Agent 条目；去重并检查 MitM 冲突与列出的业务保护域名。静态筛选不能保证所有新增域名当前仍只承载广告，未逐条实机测试。
+
+原数据作者：GeQ1an/Rules 及其贡献者；并非本项目原创。来源：https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list ，用户指定的 CDN：https://fastly.jsdelivr.net/gh/GeQ1an/Rules@master/QuantumultX/Filter/AdBlock.list 。截至接入时该文件 master 分支最后修改日期为 2024-11-16；不要把本项目生成时间理解为该源维护时间。
+
+构建时将该源保存为 SOURCE_DIRECTORY/geq.list，与原来的三个上游文件一起提供，再运行 `python3 build.py SOURCE_DIRECTORY`。`supplement.py` 执行筛选，`build-report.json` 记录来源哈希及排除原因。源缺失或异常时停止发布，不清空补充规则。后续更新必须携带 supplement.py 并检查两份来源；保持实测自定义补丁。
