@@ -2,7 +2,7 @@
   "rewrite_rules": 1306,
   "mitm_hostnames": 817,
   "source_sections_with_selected_rules": 511,
-  "filter_rules": 2428,
+  "filter_rules": 8505,
   "skipped_invalid_regex": [],
   "removed_filter_overlap": [
     "1rtb.net",
@@ -625,13 +625,528 @@
     "招财猫直聘"
   ],
   "validation": "static syntax and deduplication only; no on-device test",
-  "update_mode": "manual snapshot, no automatic upstream sync",
-  "user_tested_additions": {
-    "date": "2026-09-08",
-    "hosts": [
-      "83876gc.ezze0ct.com",
-      "0812gc.18tmnxt.com"
+  "update_mode": "ChatGPT scheduled task; no GitHub Actions workflow",
+  "supplement": {
+    "source": "https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list",
+    "sha256": "41524467645d26179eca9277e9347d6f73cbf723d5d80f8c8bef25a3afd439c1",
+    "added": 6077,
+    "skipped_counts": {
+      "mitm_overlap": 65,
+      "already_covered": 2036,
+      "protected_service_or_business_label": 2,
+      "non_domain_rule": 58,
+      "invalid_domain": 2
+    },
+    "skipped_details": [
+      {
+        "rule": "HOST-SUFFIX,a.ckm.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,ad.m.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,afp.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,api.cupid.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,c.uaa.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,cloudpush.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,cm.passport.iqiyi.com,AdBlock",
+        "reason": "protected_service_or_business_label"
+      },
+      {
+        "rule": "HOST-SUFFIX,cupid.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,emoticon.sns.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,gamecenter.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,ifacelog.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,mbdlog.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,msg.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,msga.cupid.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,nl.notice.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,nl.rcd.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,notice.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,paopao.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,policy.video.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,static.g.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,store.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,t7z.cupid.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,tracker.sns.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,yuedu.iqiyi.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "IP-CIDR,101.227.97.240/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,101.227.200.11/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,101.227.200.28/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,124.192.153.42/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "HOST-SUFFIX,push.m.youku.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "IP-CIDR,117.177.248.17/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,117.177.248.41/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,223.87.176.139/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,223.87.176.176/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,223.87.177.180/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,223.87.177.182/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,223.87.177.184/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,223.87.177.43/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,223.87.177.47/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,223.87.177.80/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,223.87.182.101/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,223.87.182.102/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,223.87.182.11/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,223.87.182.52/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "HOST-SUFFIX,cdn.cmop.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,cmop.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,da.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,imgaliyun.da.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,imgaliyun.res.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,m2.da.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,mobaliyun.res.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,mobile.da.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,mobile2.da.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,pc.da.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,pc1.da.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,pcvideoaliyun.titan.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,pcvideoyd.titan.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,pcweb.v1.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,py.da.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,v2.da.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,web.da.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,x.da.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,y.da.mgtv.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,09_19.supfree.net,AdBlock",
+        "reason": "invalid_domain"
+      },
+      {
+        "rule": "HOST-SUFFIX,adm.10jqka.com.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,adpai.thepaper.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,adui.tg.meitu.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,adview.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,afd.baidu.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,amdc.m.taobao.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,api-shoulei-ssl.xunlei.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,btrace.qq.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,cmsapi.wifi8.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,dsp.toutiao.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,dsp-impr2.youdao.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,impservice.dictapp.youdao.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,ja.gamersky.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,ja1.gamersky.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,pay.holaq.com,AdBlock",
+        "reason": "protected_service_or_business_label"
+      },
+      {
+        "rule": "HOST-SUFFIX,pb3.pstatp.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,sf3-fe-tos.pglstatp-toutiao.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,t1.58cdn.com.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,t2.58cdn.com.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,t3.58cdn.com.cn,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,tuitiger.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,ut2.shuqistat.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "HOST-SUFFIX,XiaoQiang,AdBlock",
+        "reason": "invalid_domain"
+      },
+      {
+        "rule": "HOST,impservice.dictapp.youdao.com,AdBlock",
+        "reason": "mitm_overlap"
+      },
+      {
+        "rule": "IP-CIDR,39.107.15.115/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,47.89.59.182/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,103.49.209.27/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,118.89.204.198/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,123.56.152.96/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "USER-AGENT,AVOS*,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,61.160.200.223/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,61.160.200.242/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,61.160.200.252/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,61.174.50.214/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,111.175.220.163/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,111.175.220.164/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,124.232.160.178/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,175.6.223.15/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,183.59.53.237/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,218.93.127.37/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,221.228.17.152/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,221.231.6.79/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,222.186.61.91/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,222.186.61.95/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,222.186.61.96/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,222.186.61.97/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,106.75.231.48/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,119.4.249.166/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,220.196.52.141/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,221.6.4.148/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,114.247.28.96/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,221.179.131.72/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,221.179.140.145/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,10.72.25.0/24,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,115.182.16.79/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,118.144.88.126/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,118.144.88.215/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,120.76.189.132/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,124.14.21.147/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,124.14.21.151/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,180.166.52.24/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,220.115.251.25/32,AdBlock",
+        "reason": "non_domain_rule"
+      },
+      {
+        "rule": "IP-CIDR,222.73.156.235/32,AdBlock",
+        "reason": "non_domain_rule"
+      }
     ],
-    "result": "User reports banner disappeared with both rules enabled; individual necessity and navigation not verified."
+    "validation": "static screening; added domains are not individually device-tested"
   }
 }
