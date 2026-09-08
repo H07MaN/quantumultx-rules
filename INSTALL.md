@@ -39,7 +39,7 @@ https://raw.githubusercontent.com/H07MaN/quantumultx-rules/main/china-adblock.sn
 ## 本次构建范围
 
 - 1,306 条原生重写规则，包括 reject 系列和两条选定的广告响应字段替换。
-- 2,426 条域名拦截规则；删除了命中本重写服务主机的部分域名拦截冲突。
+- 2,428 条域名拦截规则；删除了命中本重写服务主机的部分域名拦截冲突。
 - 817 个去重的 MitM 主机名/模式，取自保留规则所属分组与上游已启用主机名的交集。分组中可能仍包含只供其他规则使用的主机名，并非逐个实测清单。
 - 选取了 511 个上游分组中的规则。分组数不等于支持或实测通过的 App 数。
 - 包括百度系、知乎、小红书、京东、部分微信公众号推广接口，以及许多开屏、弹窗与广告联盟接口；每个 App 只覆盖保留下来的路径。
@@ -58,3 +58,7 @@ https://raw.githubusercontent.com/H07MaN/quantumultx-rules/main/china-adblock.sn
 - 官方重写示例：https://github.com/crossutility/Quantumult-X/blob/master/sample-import-rewrite.snippet
 
 `build.py` 记录转换过程；`build-report.json` 记录数量、分组与过滤冲突。规则头部记录下载内容 SHA256。保留原作者归属与 GPL-3.0 许可，修正一处 KFC 路径中的非法正则转义，去重时对重复 URL 正则保留第一条。
+
+## 2026-09-08 用户实测补充
+
+新增两个精确域名：`83876gc.ezze0ct.com`、`0812gc.18tmnxt.com`。用户确认同时拦截后底部横幅消失，尚未分别验证每条必要性及翻页功能。没有扩大为 gc 关键词或整个主域名拦截。build.py 会在后续重建时保留这两条规则。
