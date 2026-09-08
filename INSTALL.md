@@ -38,9 +38,9 @@ https://raw.githubusercontent.com/H07MaN/quantumultx-rules/main/china-adblock.sn
 
 ## 本次构建范围
 
-- 1,306 条原生重写规则，包括 reject 系列和两条选定的广告响应字段替换。
-- 8,505 条域名拦截规则；删除了命中本重写服务主机的部分域名拦截冲突。
-- 817 个去重的 MitM 主机名/模式，取自保留规则所属分组与上游已启用主机名的交集。分组中可能仍包含只供其他规则使用的主机名，并非逐个实测清单。
+- 1,530 条原生重写规则，包括 reject 系列、两条选定的广告响应字段替换和 61 条重定向。
+- 8,449 条域名拦截规则；删除了命中本重写服务主机的部分域名拦截冲突。
+- 1,003 个去重的 MitM 主机名/模式，取自保留规则所属分组与上游已启用主机名的交集。分组中可能仍包含只供其他规则使用的主机名，并非逐个实测清单。
 - 选取了 511 个上游分组中的规则。分组数不等于支持或实测通过的 App 数。
 - 包括百度系、知乎、小红书、京东、部分微信公众号推广接口，以及许多开屏、弹窗与广告联盟接口；每个 App 只覆盖保留下来的路径。
 - 这版没有远程 JavaScript；依赖脚本才能清理的混合信息流广告，不在本版完整覆盖范围。微博与抖音等不能宣称全部去广告。
@@ -70,3 +70,25 @@ https://raw.githubusercontent.com/H07MaN/quantumultx-rules/main/china-adblock.sn
 原数据作者：GeQ1an/Rules 及其贡献者；并非本项目原创。来源：https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list ，用户指定的 CDN：https://fastly.jsdelivr.net/gh/GeQ1an/Rules@master/QuantumultX/Filter/AdBlock.list 。截至接入时该文件 master 分支最后修改日期为 2024-11-16；不要把本项目生成时间理解为该源维护时间。
 
 构建时将该源保存为 SOURCE_DIRECTORY/geq.list，与原来的三个上游文件一起提供，再运行 `python3 build.py SOURCE_DIRECTORY`。`supplement.py` 执行筛选，`build-report.json` 记录来源哈希及排除原因。源缺失或异常时停止发布，不清空补充规则。后续更新必须携带 supplement.py 并检查两份来源；保持实测自定义补丁。
+
+## GeQ1an 重写与其他功能合并（2026-09-08）
+
+在上一版 1,306 条重写上补充 163 条拦截和 61 条网址重定向，总计 1,530 条。包括上游的 Google 跳转、HTTP 升级与部分软件下载地址跳转等；这些会改变符合规则的网址访问目标。原有规则优先，上游重复正则不重复添加；微信公众号响应替换保留原方案。原数据作者为 GeQ1an、DivineEngine 及其上游贡献者。
+
+修正淘宝、京东、小米、网易严选、苏宁、一号店共 6 个目标地址自匹配问题。上游同一 hypersnap 源地址存在两个不同跳转目标，保留第一条。排除 Apple lookup App 更新检查拦截，因为它不是广告接口。补充重定向源主机名，并重新计算分流冲突；分流从 8,505 调整为 8,449 条。两个实测横幅补丁不变。
+
+验证范围：正则编译、目标与跳转链不循环、别名跳转、可选地区参数保留、分流去重、补丁保留。并未逐个验证旧跳转目标当前的服务可用性，也没有实机验证新增规则。
+
+来源：https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Rewrite/Rewrite.list 。构建前下载到 SOURCE_DIRECTORY/geq-rewrite.list；build.py 需要 supplement.py 和 rewrite_supplement.py。每周更新同时检查 GeQ1an 分流与重写来源，保留本次去重和循环保护；源异常则停止发布。
+
+### B站国际版地区参数：可选，默认不启用
+
+单独的重写资源：https://raw.githubusercontent.com/H07MaN/quantumultx-rules/main/bili-region-optional.snippet
+
+此资源不被主订阅引用，不添加它就不会生效。按上游意图，将限定接口中已有的 s_locale 与 sim_code 参数改为 zh-Hans_PH 和 51503；修正上游捕获组问题、保留其他查询参数，并排除重复改写。不创建缺失参数，不承诺地区解锁；可能影响登录及请求方法，未进行实际兼容性测试。用户确需时才添加到重写。
+
+下面仅是手动可选配置示例，明确默认关闭：
+
+```ini
+https://raw.githubusercontent.com/H07MaN/quantumultx-rules/main/bili-region-optional.snippet, tag=B站国际版地区参数（可选）, opt-parser=false, enabled=false
+```
