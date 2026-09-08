@@ -2,7 +2,7 @@
   "rewrite_rules": 1306,
   "mitm_hostnames": 817,
   "source_sections_with_selected_rules": 511,
-  "filter_rules": 2426,
+  "filter_rules": 2428,
   "skipped_invalid_regex": [],
   "removed_filter_overlap": [
     "1rtb.net",
@@ -625,5 +625,13 @@
     "招财猫直聘"
   ],
   "validation": "static syntax and deduplication only; no on-device test",
-  "update_mode": "manual snapshot, no automatic upstream sync"
+  "update_mode": "manual snapshot, no automatic upstream sync",
+  "user_tested_additions": {
+    "date": "2026-09-08",
+    "hosts": [
+      "83876gc.ezze0ct.com",
+      "0812gc.18tmnxt.com"
+    ],
+    "result": "User reports banner disappeared with both rules enabled; individual necessity and navigation not verified."
+  }
 }
