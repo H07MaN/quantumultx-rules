@@ -1,0 +1,6 @@
+# OPTIONAL: Bili international PH parameters; not enabled by main subscriptions.
+# Derived intent from GeQ1an/Rules. Rebuilt captures; preserve query parameters and avoid self-loops.
+# May affect request methods/login; service compatibility not device-tested. Opt in only.
+^(https?://(?:app\.biliintl\.com/(?:x/)?(?:intl|dm|reply|history|v\d/(?:fav|msgfeed))[^?#]*|passport\.biliintl\.com/x/intl/passport-login/[^?#]*)\?(?:[^#]*&)?s_locale)=((?!zh-Hans_PH(?:&|$))[^&#]*)([^#]*)$ url 302 $1=zh-Hans_PH$3
+^(https?://(?:app\.biliintl\.com/(?:x/)?(?:intl|dm|reply|history|v\d/(?:fav|msgfeed))[^?#]*|passport\.biliintl\.com/x/intl/passport-login/[^?#]*)\?(?:[^#]*&)?sim_code)=((?!51503(?:&|$))[^&#]*)([^#]*)$ url 302 $1=51503$3
+hostname = app.biliintl.com, passport.biliintl.com
