@@ -5,6 +5,7 @@ GPL-3.0; retains upstream authorship. No network requests or remote scripts.
 """
 from pathlib import Path
 import sys, re, json, hashlib, fnmatch
+from supplement import merge_geq
 
 src = Path(sys.argv[1])
 out = Path(__file__).resolve().parent
@@ -92,12 +93,15 @@ for domain in ('83876gc.ezze0ct.com', '0812gc.18tmnxt.com'):
     if ('host', domain) not in fseen:
         fseen.add(('host', domain))
         fresult.append(f'host, {domain}, reject')
+geq_report = merge_geq(src / 'geq.list', fresult, fseen, hosts)
 (out / 'china-adblock.list').write_text('\n'.join([
     '# Quantumult X 国内广告域名拦截',
     '# Derived from fmz200/wool_scripts; author: 奶思 and upstream contributors.',
     '# Source: https://github.com/fmz200/wool_scripts; GPL-3.0 (see LICENSE).',
     '# Modified: 2026-09-07. Domain-only subset; no IP or keyword rules.',
     '# Import as filter resource; leave force-policy unset.',
+    '# Supplement: GeQ1an/Rules master/QuantumultX/Filter/AdBlock.list; domain subset, mapped to reject.',
+    '# Supplement SHA256: ' + geq_report['sha256'],
     '# Source SHA256: ' + hashlib.sha256(filters.encode()).hexdigest(), *fresult]) + '\n')
 (out / 'LICENSE').write_text((src / 'upstream-LICENSE').read_text())
 stats = {'rewrite_rules': len(seen), 'mitm_hostnames': len(hosts),
@@ -105,6 +109,7 @@ stats = {'rewrite_rules': len(seen), 'mitm_hostnames': len(hosts),
          'skipped_invalid_regex': skipped, 'removed_filter_overlap': sorted(set(overlaps)),
          'source_sections': sections,
          'validation': 'static syntax and deduplication only; no on-device test',
-         'update_mode': 'manual snapshot, no automatic upstream sync'}
+         'update_mode': 'ChatGPT scheduled task; no GitHub Actions workflow',
+         'supplement': geq_report}
 (out / 'build-report.json').write_text(json.dumps(stats, ensure_ascii=False, indent=2) + '\n')
 print(json.dumps({k:v for k,v in stats.items() if k not in {'source_sections', 'removed_filter_overlap'}}, ensure_ascii=False))
