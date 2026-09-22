@@ -7,7 +7,7 @@ from pathlib import Path
 import sys, re, json, hashlib, fnmatch
 from datetime import datetime, timezone
 from supplement import merge_geq, conflicts
-from rewrite_supplement import merge_rewrites, optional_region
+from rewrite_supplement import merge_rewrites, optional_region, normalize
 
 src = Path(sys.argv[1])
 out = Path(__file__).resolve().parent
@@ -27,6 +27,16 @@ for line in rewrite.splitlines():
     block.append(line)
 blocks.append(block)
 result, hosts, seen, skipped, sections = [], set(), set(), [], []
+# These newly appeared upstream hostname declarations are broader than the
+# selected advertising paths.  Do not expand MitM across arbitrary TLDs or an
+# entire protected service merely because another rule in the same section is
+# retained.
+BLOCKED_MITM_HOSTS = {
+    '*.pangolin-sdk-toutiao.*',
+    '*.pglstatp-toutiao.com.*',
+    '*.pstatp.com.*',
+    'tiktokv.com',
+}
 body_paths = (r'mp\.weixin\.qq\.com\/mp\/getappmsgad',
               r'api\.m\.jd\.com\/client\.action\?functionId=lite_advertising')
 for block in blocks:
@@ -51,9 +61,10 @@ for block in blocks:
             skipped.append({'reason': 'invalid_regex', 'rule': line})
             continue
         canonical = pattern + ' url ' + (action.lower() if keep else action)
-        if pattern in seen:
+        pattern_key = normalize(pattern)
+        if pattern_key in seen:
             continue
-        seen.add(pattern)
+        seen.add(pattern_key)
         chosen.append(canonical)
     if chosen:
         result.extend([title, *chosen, ''])
@@ -61,7 +72,8 @@ for block in blocks:
         # Never enable hostnames that upstream deliberately leaves disabled.
         hosts.update(declared & global_hosts)
 
-hosts = {h for h in hosts if h and h not in {'*', '*.*'} and not h.startswith('-')}
+hosts = {h for h in hosts if h and h not in {'*', '*.*'} and not h.startswith('-')
+         and h not in BLOCKED_MITM_HOSTS}
 rewrite_report = merge_rewrites(src / 'geq-rewrite.list', result, hosts, seen)
 (out / 'bili-region-optional.snippet').write_text(optional_region())
 build_date = datetime.now(timezone.utc).date().isoformat()
@@ -117,6 +129,8 @@ stats = {'rewrite_rules': len(seen), 'mitm_hostnames': len(hosts),
          'source_sections': sections,
          'validation': 'static syntax and deduplication only; no on-device test',
          'update_mode': 'ChatGPT scheduled task; no GitHub Actions workflow',
+         'deduplication': 'URL patterns compared after escaped-slash normalization',
+         'mitm_safety': {'blocked_overbroad_hostnames': sorted(BLOCKED_MITM_HOSTS)},
          'supplement': geq_report, 'rewrite_supplement': rewrite_report,
          'built_at': build_date}
 (out / 'build-report.json').write_text(json.dumps(stats, ensure_ascii=False, indent=2) + '\n')

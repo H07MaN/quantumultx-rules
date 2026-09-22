@@ -1,7 +1,7 @@
 # Quantumult X 国内广告域名拦截
 # Derived from fmz200/wool_scripts; author: 奶思 and upstream contributors.
 # Source: https://github.com/fmz200/wool_scripts; GPL-3.0 (see LICENSE).
-# Modified: 2026-09-08. Domain-only subset; no IP or keyword rules.
+# Modified: 2026-09-22. Domain-only subset; no IP or keyword rules.
 # Import as filter resource; leave force-policy unset.
 # Supplement: GeQ1an/Rules master/QuantumultX/Filter/AdBlock.list; domain subset, mapped to reject.
 # Supplement SHA256: 41524467645d26179eca9277e9347d6f73cbf723d5d80f8c8bef25a3afd439c1
@@ -217,7 +217,6 @@ host-suffix, cpro.baidu.com, reject
 host-suffix, pos.baidu.com, reject
 host, als.baidu.com, reject
 host, duclick.baidu.com, reject
-host, mobads.baidu.com, reject
 host, mobads-logs.baidu.com, reject
 host, nadvideo2.baidu.com, reject
 host, nsclick.baidu.com, reject
@@ -225,7 +224,6 @@ host-suffix, bce.baidu.com, reject
 host-suffix, bar.baidu.com, reject
 host-suffix, baiduyubaidu.com, reject
 host-suffix, baidutv.baidu.com, reject
-host-suffix, baichuan.baidu.com, reject
 host-suffix, appc.baidu.com, reject
 host-suffix, anquan.baidu.com, reject
 host-suffix, adscdn.baidu.com, reject
@@ -331,7 +329,6 @@ host-suffix, tk.baidu.com, reject
 host-suffix, tkweb.baidu.com, reject
 host-suffix, toolbar.baidu.com, reject
 host-suffix, tuijian.baidu.com, reject
-host-suffix, tuisong.baidu.com, reject
 host-suffix, ucstat.baidu.com, reject
 host-suffix, ulic.baidu.com, reject
 host-suffix, ulog.imap.baidu.com, reject
@@ -354,7 +351,6 @@ host-suffix, als.baidu.com, reject
 host-suffix, duclick.baidu.com, reject
 host-suffix, hm.baidu.com, reject
 host-suffix, hmma.baidu.com, reject
-host-suffix, mobads.baidu.com, reject
 host-suffix, mobads-logs.baidu.com, reject
 host-suffix, nsclick.baidu.com, reject
 host, hm.baidu.com, reject
@@ -459,7 +455,6 @@ host, exp.360in.com, reject
 host-suffix, hoisin.coocaa.com, reject
 host-suffix, hoisin.coocaatv.com, reject
 host, data-hoisin.coocaa.com, reject
-host-suffix, atrace.chelaile.net.cn, reject
 host, logs.chelaile.net.cn, reject
 host, ad.chelaile.net.cn, reject
 host-suffix, a.dangdang.com, reject
@@ -507,7 +502,6 @@ host, security-lq.snssdk.com, reject
 host, tnc3-aliec2.snssdk.com, reject
 host, v6-novelapp.ixigua.com, reject
 host-suffix, novelapp.ixigua.com, reject
-host-suffix, default.ixigua.com, reject
 host, msync-im1-vip6-std.easemob.com, reject
 host, apd-pcdnwxlogin.teg.tencent-cloud.net, reject
 host, api.iegadp.qq.com, reject
@@ -560,17 +554,13 @@ host-suffix, seavideo-ak.espn.go.com, reject
 host-suffix, browser.gwdang.com, reject
 host-suffix, router.gwdang.com, reject
 host-suffix, google-analytics.com, reject
-host-suffix, doubleclick.net, reject
-host-suffix, googleadservices.com, reject
 host-suffix, googleadsserving.cn, reject
-host-suffix, googlesyndication.com, reject
 host-suffix, googletagservices.com, reject
 host-suffix, googletagmanager.com, reject
 host-suffix, video-ad-stats.googlesyndication.com, reject
 host-suffix, tpc.googlesyndication.com, reject
 host-suffix, pagead.google.com, reject
 host-suffix, pagead.l.google.com, reject
-host-suffix, pagead2.googlesyndication.com, reject
 host-suffix, pagead-tpc.l.google.com, reject
 host-suffix, mobileads.google.com, reject
 host-suffix, googlecommerce.com, reject
@@ -582,7 +572,6 @@ host-suffix, www.googleadservices.com, reject
 host-suffix, www.google-analytics.com, reject
 host, ads.youtube.com, reject
 host-suffix, cmshow.gtimg.cn, reject
-host-suffix, discuz.gtimg.cn, reject
 host-suffix, gu.qlogo.cn, reject
 host-suffix, py.qlogo.cn, reject
 host-suffix, py2.qlogo.cn, reject
@@ -591,11 +580,9 @@ host-suffix, admob.com, reject
 host-suffix, crashlytics.com, reject
 host-suffix, csi.gstatic.com, reject
 host-suffix, beacon.gtimg.com, reject
-host-suffix, bla.gtimg.com, reject
 host-suffix, lb.gtimg.com, reject
 host-suffix, pgdt.gtimg.com, reject
 host-suffix, ra.gtimg.com, reject
-host-suffix, splashqqlive.gtimg.com, reject
 host-suffix, swa.gtimg.com, reject
 host-suffix, tui.gtimg.com, reject
 host-suffix, wa.gtimg.com, reject
@@ -734,15 +721,12 @@ host-suffix, counter.kingsoft.com, reject
 host-suffix, bu1.duba.com, reject
 host-suffix, bu2.duba.com, reject
 host-suffix, docer.com, reject
-host-suffix, iciba.com, reject
 host-suffix, pdl.gionee.com, reject
 host-suffix, ad.toutiao.com, reject
 host-suffix, dm.toutiao.com, reject
 host-suffix, nativeapp.toutiao.com, reject
 host-suffix, partner.toutiao.com, reject
 host-suffix, track.toutiao.com, reject
-host-suffix, dm.pstatp.com, reject
-host-suffix, s3a.pstatp.com, reject
 host-suffix, jzt.jd.com, reject
 host-suffix, img-x.jd.com, reject
 host-suffix, du.jd.com, reject
@@ -1331,7 +1315,6 @@ host, track.tenjin.com, reject
 host, track.tenjin.io, reject
 host, errlog.umeng.com, reject
 host, lf9-cdn-tos.bytegecko.com, reject
-host, novel.pangolin-sdk-toutiao.com, reject
 host-suffix, apoll.m.taobao.com, reject
 host-suffix, h-adashx.ut.taobao.com, reject
 host-suffix, w.m.taobao.com, reject
@@ -1384,9 +1367,7 @@ host-suffix, adsview.qq.com, reject
 host-suffix, adsview2.qq.com, reject
 host-suffix, adv.app.qq.com, reject
 host-suffix, adver.qq.com, reject
-host-suffix, aeventlog.beacon.qq.com, reject
 host-suffix, analy.qq.com, reject
-host-suffix, astrategy.beacon.qq.com, reject
 host-suffix, rp.crasheye.cn, reject
 host-suffix, tencentmind.com, reject
 host-suffix, p.tencentmind.com, reject
@@ -1546,16 +1527,11 @@ host-suffix, dsp.youdao.com, reject
 host-suffix, union.youdao.com, reject
 host, ad.bn.netease.com, reject
 host, ad.yixin.im, reject
-host, admusicpic.music.126.net, reject
-host, g1.163.com, reject
 host, gorgon.youdao.com, reject
 host, iad.g.163.com, reject
 host, iadmat.nosdn.127.net, reject
-host, iadmusicmat.music.126.net, reject
-host, iadmusicmatvideo.music.126.net, reject
 host, impservice.youdao.com, reject
 host, n.3g.163.com, reject
-host, nex.163.com, reject
 host, yt-adp.nosdn.127.net, reject
 host, yt-adp.ws.126.net, reject
 host-suffix, ir.mail.126.com, reject
@@ -1565,8 +1541,6 @@ host-suffix, crashlytics.163.com, reject
 host-suffix, e-p4p.163.com, reject
 host-suffix, fa.163.com, reject
 host-suffix, g.163.com, reject
-host-suffix, g1.163.com, reject
-host-suffix, nex.163.com, reject
 host-suffix, popme.163.com, reject
 host-suffix, temp.163.com, reject
 host-suffix, n.3g.163.com, reject
@@ -1583,7 +1557,6 @@ host-suffix, mr.da.netease.com, reject
 host-suffix, pr.da.netease.com, reject
 host-suffix, rd.da.netease.com, reject
 host-suffix, wr.da.netease.com, reject
-host-suffix, img1.126.net, reject
 host-suffix, img2.126.net, reject
 host-suffix, img3.126.net, reject
 host-suffix, img6.126.net, reject
@@ -1591,9 +1564,6 @@ host-suffix, mimg.126.net, reject
 host-suffix, pimg1.126.net, reject
 host-suffix, push.126.net, reject
 host-suffix, b.bst.126.net, reject
-host-suffix, admusicpic.music.126.net, reject
-host-suffix, iadmusicmat.music.126.net, reject
-host-suffix, iadmusicmatvideo.music.126.net, reject
 host-suffix, android.push.126.net, reject
 host-suffix, news.push.126.net, reject
 host-suffix, webstat.ws.126.net, reject
@@ -2038,7 +2008,6 @@ host-suffix, bu01.zybang.com, reject
 host-suffix, bu02.zybang.com, reject
 host-suffix, miaozhen.com, reject
 host-suffix, ad-sign.byteimg.com, reject
-host-suffix, tos.pstatp.com, reject
 host-suffix, pangolin.snssdk.com, reject
 host-suffix, video-cn.snssdk.com, reject
 host-suffix, getui.com, reject
@@ -5155,6 +5124,7 @@ host-suffix, good.ta80.com, reject
 host-suffix, goolpter.com, reject
 host-suffix, gopig.io, reject
 host-suffix, gosquared.com, reject
+host-suffix, goto.www.iciba.com, reject
 host-suffix, gotourl.xyz, reject
 host-suffix, goufanli100.com, reject
 host-suffix, gouwubang.com, reject
@@ -5975,7 +5945,6 @@ host-suffix, livehapp.com, reject
 host-suffix, livep.l.ott.video.qq.com, reject
 host-suffix, lives.l.cp81.ott.cibntv.net, reject
 host-suffix, lives.l.ott.video.qq.com, reject
-host-suffix, lives.l.qq.com, reject
 host-suffix, lixiangmo.com, reject
 host-suffix, ljrtb.cn, reject
 host-suffix, lkf1.m.sanhao3.com, reject
@@ -6706,7 +6675,6 @@ host-suffix, odin.goo.mx, reject
 host-suffix, officeme.cn, reject
 host-suffix, offline-adv.oray.com, reject
 host-suffix, oikxlcv.wang, reject
-host-suffix, oimagea2.ydstatic.com, reject
 host-suffix, ojngisbfwwyp.com, reject
 host-suffix, ok.432kkk.com, reject
 host-suffix, ok365.com, reject
